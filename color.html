@@ -1,0 +1,35 @@
+<html>
+
+<head>
+<script>
+function fn1()
+{
+
+var div=document.getElementById("d1");
+div.style.background="red";
+}
+
+function fn2()
+{
+var div=document.getElementById("d1");
+div.style.background="blue";
+
+}
+function fn3()
+{
+var div=document.getElementById("d1");
+div.style.background="green";
+}
+</script>
+</head>
+<body>
+<input type="radio"  name="a"  value="red" onclick="fn1()" id="td1"/>red
+<input type="radio" name="a" value="blue" onclick="fn2()" id="td2" />blue
+<input type="radio" name="a" value="green" onclick="fn3()" id="td3"/>green
+<div style= "height:300px;width:300px; border:1px solid black" id="d1"> 
+</div>
+
+</body>
+
+</html>
+
