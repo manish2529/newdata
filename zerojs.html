@@ -1,0 +1,130 @@
+<html>
+<head>
+<script src="jquery-3.2.1.min.js"></script>
+
+</head>
+<body bgcolor="grey">
+
+<center><div style= "width:96px;height:96px ;border:1px solid white" >
+
+<div style= "width:30px;height:30px ;border:1px solid black ;float:left" id="d1"  class="c1"></div>
+
+<div style= "width:30px;height:30px ;border:1px solid black;float:left"  id="d2" class="c1" ></div>
+
+<div style= "width:30px;height:30px ;border:1px solid black;float:left" id="d3" class="c1"></div>
+
+<div style= "width:30px;height:30px ;border:1px solid black ;float:left" id ="d4" class="c1"></div>
+
+<div style= "width:30px;height:30px ;border:1px solid black;float:left"id ="d5" class="c1" ></div>
+
+<div style= "width:30px;height:30px ;border:1px solid black;float:left"id ="d6" class="c1"></div>
+
+<div style= "width:30px;height:30px ;border:1px solid black ;float:left"id ="d7"class="c1" ></div>
+
+<div style= "width:30px;height:30px ;border:1px solid black;float:left"id ="d8" class="c1"></div>
+
+<div style= "width:30px;height:30px ;border:1px solid black;float:left"id ="d9"class="c1" ></div>
+
+</div>
+</center>
+<script>
+var cn=0;
+var temp=0;
+$(".c1").click(
+
+ function()
+ 
+{
+if ($(this).html()=="")	 
+	 {
+	  
+	  if(cn%2==0)
+
+	  {
+	 
+	 $(this).html("0");
+	 
+	 
+	 }
+	 
+	 else
+	 
+	 {
+	 
+	 $(this).html("X");
+
+	 }
+
+	 
+	 
+	 cn++;
+	
+	fnwin('#d1','#d2','#d3');
+
+    fnwin('#d4','#d5','#d6');
+
+    fnwin('#d7','#d8','#d9');
+
+    fnwin('#d1','#d4','#d7');
+
+    fnwin('#d2','#d5','#d8');
+
+    fnwin('#d3','#d6','#d9');
+
+    fnwin('#d1','#d5','#d9');
+
+    fnwin('#d3','#d5','#d7');
+
+	if(cn==9 && temp==0)
+
+   { 	
+
+   alert("DRAW MATCH");
+fn();
+   }
+	}
+	});
+
+	
+   
+function fnwin(m,n,o)
+
+{  
+     var x=$(m);
+     var y=$(n);
+     var z=$(o);
+if(x.html()=="0" && y.html()=="0" && z.html()=="0")
+ 	
+	 {
+temp=1;
+alert("0 win");
+	fn();
+	}	
+
+	if(x.html()=="X" && y.html()=="X" && z.html()=="X")
+ 	
+	 {
+temp=1;
+alert("X win");
+	}	
+	
+	};
+	
+function fn()
+
+{
+$("#d1").html("");
+$("#d2").html("");
+$("#d3").html("");
+$("#d4").html("");
+$("#d5").html("");
+$("#d6").html("");
+$("#d7").html("");
+$("#d8").html("");
+$("#d9").html("");
+
+};
+	
+</script>
+</body>
+</html>
