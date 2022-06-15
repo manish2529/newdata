@@ -1,0 +1,121 @@
+<html>
+<head>
+<script>
+function fn()
+
+{ 
+
+var x= document.getElementById("t2")
+
+var y= document.getElementById("t3")
+
+
+var tb1=document.getElementById("t1");
+
+tb1.style.display= "";
+
+
+
+ var r1=tb1.insertRow(-1);
+
+var c0 =r1.insertCell(0);
+
+var c1 =r1.insertCell(1);
+
+var c2 =r1.insertCell(2);
+
+c0.innerHTML=x.value;
+
+c1.innerHTML=y.value;
+c2.innerHTML="<input type='button' value='edit' onclick='fn2(this)'><input type='button' value='delete' onclick='fn1(this)'>";
+}
+function fn1(btn)
+{
+var r=btn.parentNode.parentNode;
+var tbl=document.getElementById("t1");
+tbl.deleteRow(r.rowIndex);
+}
+function fn2(btn)
+{
+
+
+r=btn.parentNode.parentNode;
+var c0=r.cells[0];
+var c1=r.cells[1];
+
+
+t2.value=c0.innerHTML;
+t3.value=c1.innerHTML;
+
+ 
+ }
+ function fn3()
+ {
+var x= document.getElementById("t2");
+
+var y= document.getElementById("t3");
+bt1.style.display="none" ;
+ 
+  
+}
+ 
+</script>
+</head>
+ <style>
+
+ .cs
+
+ { border:1px solid black;
+
+ border-collapse:collapse;
+ 
+ }
+	 
+ </style>
+
+</head>	 
+	  
+	 
+<center> 
+<body bgcolor=" #ddd">
+         
+<TABLE > 
+		  
+<TR><Td>First name	</TD>
+		  
+<TD><INPUT TYPE="TEXT" placeholder="Enter your name" id ="t2" /></TD>
+</TR>
+ <TR>
+<Td>last name</TD>
+<TD>
+ <input type="text" placeholder="Enter your last name" id ="t3"/></TD>
+<TR>
+</TR>
+<TR>
+<TD><center><INPUT TYPE="BUTTON" VALUE="ADD" onclick="fn()" ></center><br></TD>
+</TR>
+<TR>
+	 <TD><INPUT TYPE="BUTTON" VALUE="UPDATE" onclick="fn3()" id="bt1"/><br></TD>
+	
+     
+	</TR>
+
+
+</table>
+<table style= "width:400px;height:17px ;display:none " border=5 class="cs" id="t1">	
+
+<TR>
+
+<td  class="cs" style="width:100px;height:17px ;border:2px solid blue;">First Name</TD>
+
+<td class="cs" style="width:200px;height:17px ;border:2px solid red;"> last name</TD>
+
+<td class="cs" style="width:100px;height:17px ;border:2px solid black;"></TD>
+</TR>
+
+
+    </table>		  
+		  
+		  </body>
+
+</html>
