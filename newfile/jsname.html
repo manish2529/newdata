@@ -1,0 +1,33 @@
+<html>
+<body>
+<head>
+<script>
+function fn()
+{
+var x=document.getElementById("fs");
+var y=document.getElementById("md");
+var z=document.getElementById("st");
+if(x.value=="")
+{
+alert(" fill first name");
+}
+{
+alert(" fill middle name");
+}
+{
+alert(" fill last name");
+}
+}
+
+
+</script>
+</head>
+first name:
+<input type="text" id="fs"><br>
+middle name:
+<input type="text" id="md"/><br>
+last name:
+<input type="text" id="st"/><br>
+<input type="button" value="add" onclick="fn()"/>
+</body>
+</html>
